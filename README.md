@@ -53,13 +53,13 @@ Create a folder name `anpr` and copy the following py files and folders:
 
 Usage is as follows:
 
-1. (optional but recommended) `./extractbgs.py SUN397.tar.gz`: Extract ~3GB of background images from the [SUN database](http://groups.csail.mit.edu/vision/SUN/) into `bgs/`. (`bgs/` must not already exist.) The tar file (36GB) can be [downloaded here](http://vision.princeton.edu/projects/2010/SUN/SUN397.tar.gz). This step may take a while as it will extract 108,634 images.
+1. (optional but recommended) `./extractbgs.py SUN397.tar.gz`: Extract ~3GB of background images from the [SUN database](http://groups.csail.mit.edu/vision/SUN/) into `bgs/` (`bgs/` must be empty). The tar file (36GB) can be [downloaded here](http://vision.princeton.edu/projects/2010/SUN/SUN397.tar.gz). This step may take a while as it will extract 108,634 images.
 
-2. `./gen.py 1000`: Generate 1000 test set images in `test/`. (`test/` must be empty.) This step requires `EcuadorLicencePlate.ttf` to be in the `fonts/` directory, which can be downloaded here.
+2. `./gen.py 1000`: Generate 1000 (or the number you want) test set images in `test/` (`test/`must be empty). This step requires a `.ttf` files to be in the `fonts/` directory.
 
-3. `./train.py`: Train the model. A GPU is recommended for this step. It will take around 100,000 batches to converge. When you're satisfied that the network has learned enough press Ctrl+C and the process will write the weights to weights.npz and return.
+3. `./train.py`: Train the model. A **GPU** is recommended for this step. It will take around 100,000 batches to converge. When you're satisfied that the network has learned enough press Ctrl+C once and the process will create a `weights.npz` file and write the weights.
 
-4. `./detect.py in.jpg weights.npz out.jpg`: Detect number plates in an image.
+4. `./detect.py in.png weights.npz out.png`: Detect number plates in an image and give and output image
 
 
 Reproduce: [mattherwearl's deep-anpr](https://github.com/matthewearl/deep-anpr)
