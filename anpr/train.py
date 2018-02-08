@@ -118,7 +118,7 @@ def read_batches(batch_size):
 def get_loss(y, y_):
     # Calculate the loss from digits being incorrect.  Don't count loss from
     # digits that are in non-present plates.
-    digits_loss = tf.nn.softmax_cross_entropy_with_logits(
+    digits_loss = tf.nn.softmax_cross_entropy_with_logits_v2(
         logits=tf.reshape(y[:, 1:],
                           [-1, len(common.CHARS)]),
         labels=tf.reshape(y_[:, 1:],
