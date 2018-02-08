@@ -8,6 +8,7 @@ Using neural networks to build an automatic number plate recognition system. See
 
 - [Python v3.6.+ (64bits)](https://www.python.org/downloads/)
 - NumPy v1.14.+
+- Pillow v5.+
 - OpenCV v3.14.+ (for cv2)
 - [TensorFlow v1.+](https://www.tensorflow.org/install/install_windows)
 
@@ -24,7 +25,11 @@ py -m pip install numpy
 ```
 py -m pip install opencv-python
 ```
-4. Installing TensorFlow (CPU or GPU) library
+4. Installing Pillow library
+```
+py -m pip install Pillow
+```
+5. Installing TensorFlow (CPU or GPU) library
 ```
 #*CPU version*
 py -m pip install --upgrade tensorflow
