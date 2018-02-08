@@ -38,12 +38,12 @@ py -m pip install --upgrade tensorflow-gpu
 
 ## Project
 
-Create a folder name *ANPR* and copy de followin py files:
-- common.py (Common variables)
-- model.py (py dependencie)
-- gen.py (For generate test set images)
-- train.py (For train the model with generate images)
-- detect.py (For test result)
+Create a folder name `ANPR` and copy the following py files:
+- `common.py` (Common variables)
+- `model.py` (py dependencie)
+- `gen.py` (For generate test set images)
+- `train.py` (For train the model with generate images)
+- `detect.py` (For test result)
 
 
 ## Using Networks
