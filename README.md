@@ -69,7 +69,7 @@ Usage is as follows:
 
 3. `./train.py`: Train the model. A **GPU** is recommended for this step. It will take around 100,000 batches to converge. When you're satisfied that the network has learned enough press Ctrl+C once and the process will create a `weights.npz` file and write the weights.
 
-4. `./detect.py in.png weights.npz out.png`: Detect number plates in an image and give and output image. if get a tensorflow gpu error, you should uninstall it `py -m pip unistall tensorflow-gpu`
+4. `./detect.py in.png CPUweights.npz out.png`: Detect number plates in an image and give and output image. if get a tensorflow gpu error, you should uninstall it `py -m pip unistall tensorflow-gpu`
 
 
 Reproduce: [mattherwearl's deep-anpr](https://github.com/matthewearl/deep-anpr)
