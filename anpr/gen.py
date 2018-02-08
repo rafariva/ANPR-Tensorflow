@@ -274,11 +274,11 @@ def generate_ims():
         yield generate_im(font_char_ims[random.choice(fonts)], num_bg_images)
 
 
+generate_amount = 1000
 try:
     generate_amount = int(sys.argv[1])
 finally:
-    if generate_amount<0:
-        generate_amount = 1000
+    generate_amount = 1000
     print("Autogenerating 1000 test images")
 
 if __name__ == "__main__":
