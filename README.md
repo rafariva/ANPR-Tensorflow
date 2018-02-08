@@ -13,21 +13,28 @@ Using neural networks to build an automatic number plate recognition system. See
 
 ## Installations
 
-Note: For install libraries use CMD
+Note: For install libraries use CMD terminal.
 
 1. Download Python 3.6.+ (last version **of 64bits**), and install it. [Guide Video](https://www.youtube.com/watch?v=gSjL3K8C8Ao)
-2. Installing numpy library last version
+2. Installing numpy library
 ```
 py -m pip install numpy
 ```
-3. Installing OpenCV libraries last version
+3. Installing OpenCV library
 ```
 py -m pip install opencv-python
 ```
-4. Installing TensorFlow library last version
+4. Installing TensorFlow (CPU or GPU) library
 ```
+#*CPU version*
 py -m pip install --upgrade tensorflow
 ```
+or
+```
+#*GPU version*
+py -m pip install --upgrade tensorflow-gpu
+```
+
 
 ## Project
 
