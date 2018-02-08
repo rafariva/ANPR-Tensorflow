@@ -230,7 +230,7 @@ def generate_im(char_ims, num_bg_images):
     bg = generate_bg(num_bg_images)
 
     plate, plate_mask, code = generate_plate(FONT_HEIGHT, char_ims)
-    print(code)
+    
     M, out_of_bounds = make_affine_transform(
         from_shape=plate.shape,
         to_shape=bg.shape,
