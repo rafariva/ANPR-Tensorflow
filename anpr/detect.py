@@ -171,16 +171,18 @@ def letter_probs_to_code(letter_probs):
 
 if __name__ == "__main__":
     print("detect start! ", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-    im = cv2.imread("in.jpg")
+    im = cv2.imread(sys.argv[1])
 
-    im_gray = cv2.cvtColor(im, 0) / 255.
+    im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY) / 255.
+
+    f = numpy.load()
     print("show cvt pic:")
     plt.imshow(im_gray)
     plt.show()
 
-    f = numpy.load("weights.npz")
+    f = numpy.load(sys.argv[2])
 
-    for ii in numpy.load("weights.npz"):
+    for ii in numpy.load(sys.argv[2]):
         if type(f[ii]) != numpy.ndarray:
             f.files.pop(f.files.index(ii))
 
@@ -212,7 +214,7 @@ if __name__ == "__main__":
                     (255, 255, 255),
                     thickness=2)
 
-    cv2.imwrite("out.jpg", im)
+    cv2.imwrite(sys.argv[2], im)
     print("show result:")
     plt.imshow(im)
     plt.show()
