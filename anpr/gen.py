@@ -275,12 +275,7 @@ def generate_ims():
         yield generate_im(font_char_ims[random.choice(fonts)], num_bg_images)
 
 
-generate_amount = 1000
-try:
-    generate_amount = int(sys.argv[1])
-except:
-    generate_amount = 1000
-    print("Must especificate size 'gen.py 1000' (if do, empty folder). Autogenerating 1000 test images")
+generate_amount = 1000  #MUST ESPECIFY THE AMOUNT 
 
 if __name__ == "__main__":
     #os.mkdir("test")
