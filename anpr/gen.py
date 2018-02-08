@@ -152,8 +152,8 @@ def make_affine_transform(from_shape, to_shape,
     return M, out_of_bounds
 
 
-def generate_code():
-    return "{}{}{} {}{}{}{}".format(
+def generate_code(): #Ecuador's licence plate pattern
+    return "{}{}{} {}{}{}{}".format(   
         random.choice(common.LETTERS_ECU),
         random.choice(common.LETTERS),
         random.choice(common.LETTERS),
