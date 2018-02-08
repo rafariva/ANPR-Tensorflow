@@ -278,9 +278,9 @@ def generate_ims():
 generate_amount = 1000
 try:
     generate_amount = int(sys.argv[1])
-finally:
+except:
     generate_amount = 1000
-    print("Autogenerating 1000 test images")
+    print("Must especificate size 'gen.py 1000' (if do, empty folder). Autogenerating 1000 test images")
 
 if __name__ == "__main__":
     #os.mkdir("test")
