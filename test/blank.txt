@@ -1,0 +1,1 @@
+this folder should be empty before generate licence plate
