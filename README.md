@@ -2,29 +2,29 @@
 
 Using neural networks to build an automatic number plate recognition system. See [mattherwearl's blog post](http://matthewearl.github.io/2016/05/06/cnn-anpr/) for an explanation.
 
-**NOTE:  This is an experimental project and is incomplete in a number of ways.** *This project is for be test it in Windows 10, the specific version Dependecies, and the code has been modify to generate licence plate patterns from **Ecuador**.*
+**NOTE:  This is an experimental project and is incomplete in a number of ways.** *This project is for be test it in Windows 10, and the code has been modify to generate licence plate patterns from **Ecuador**.*
 
 ## Dependencies:
 
-- [Python 3.6.2 (64bits)](https://www.python.org/downloads/release/python-362/)
-- Numpy
-- OpenCV(cv2)
-- [TensorFlow](https://www.tensorflow.org/install/install_windows)
+- [Python v3.6.+ (64bits)](https://www.python.org/downloads/)
+- Numpy v1.14.+
+- OpenCV v3.14.+ (for cv2)
+- [TensorFlow v1.+](https://www.tensorflow.org/install/install_windows)
 
 ## Installations
 
 Note: For install libraries use CMD
 
 1. Download Python 3.6.+ (last version **of 64bits**), and install it. [Guide Video](https://www.youtube.com/watch?v=gSjL3K8C8Ao)
-2. Installing numpy library
+2. Installing numpy library last version
 ```
 py -m pip install numpy
 ```
-3. Installing Opencv libraries
+3. Installing OpenCV libraries last version
 ```
 py -m pip install opencv-python
 ```
-4. Installing TensorFlow library
+4. Installing TensorFlow library last version
 ```
 py -m pip install --upgrade tensorflow
 ```
