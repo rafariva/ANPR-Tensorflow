@@ -72,15 +72,14 @@ def detect(im, param_vals):
     # Execute the model at each scale.
     with tf.Session(config=tf.ConfigProto()) as sess:
         y_vals = []
-        iii = 0
+        
         for scaled_im in scaled_ims:
             feed_dict = {x: numpy.stack([scaled_im])}
             feed_dict.update(dict(zip(params, param_vals)))
             y_vals.append(sess.run(y, feed_dict=feed_dict))
-            iii = iii + 1
-            print("show scaled_im no. ", iii)
             plt.imshow(scaled_im)
             plt.show()
+    writer = tf.summary.FileWriter("logs/", sess.graph)
 
     # Interpret the results in terms of bounding boxes in the input image.
     # Do this by identifying windows (at all scales) where the model predicts a
@@ -105,12 +104,12 @@ def detect(im, param_vals):
 
             present_prob = common.sigmoid(
                 y_val[0, window_coords[0], window_coords[1], 0])
-            count_detect = count_detect + 1
+            count_detect += 1
             yield bbox_tl, bbox_tl + bbox_size, present_prob, letter_probs
-            print("第", count_detect, "回合")
-            print("show return window 左上角座標: ", bbox_tl, "右下角座標: ", bbox_tl + bbox_size)
-            print("車牌 present 可能值: ", present_prob)
-            print("車牌 letter 可能值: ", letter_probs_to_code(letter_probs))
+            print("count detect:", count_detect)
+            print("show return window: ", bbox_tl, "return windows box: ", bbox_tl + bbox_size)
+            print("present: ", present_prob)
+            print("letter: ", letter_probs_to_code(letter_probs))
 
 
 def _overlaps(match1, match2):
@@ -173,10 +172,8 @@ if __name__ == "__main__":
     print("detect start! ", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     im = cv2.imread(sys.argv[1])
 
-    im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY) / 255.
+    im_gray = cv2.cvtColor(im, 0) / 255.
 
-    f = numpy.load()
-    print("show cvt pic:")
     plt.imshow(im_gray)
     plt.show()
 
