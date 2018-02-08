@@ -1,4 +1,4 @@
-# ANPR-Tensorflow
+# ANPR-TensorFlow
 
 Using neural networks to build an automatic number plate recognition system. See [mattherwearl's blog post](http://matthewearl.github.io/2016/05/06/cnn-anpr/) for an explanation.
 
@@ -7,7 +7,7 @@ Using neural networks to build an automatic number plate recognition system. See
 ## Dependencies:
 
 - [Python v3.6.+ (64bits)](https://www.python.org/downloads/)
-- Numpy v1.14.+
+- NumPy v1.14.+
 - OpenCV v3.14.+ (for cv2)
 - [TensorFlow v1.+](https://www.tensorflow.org/install/install_windows)
 
@@ -16,7 +16,7 @@ Using neural networks to build an automatic number plate recognition system. See
 Note: For install libraries use CMD terminal.
 
 1. Download Python 3.6.+ (last version **of 64bits**), and install it. [Guide Video](https://www.youtube.com/watch?v=gSjL3K8C8Ao)
-2. Installing numpy library
+2. Installing numpy library (if not included)
 ```
 py -m pip install numpy
 ```
@@ -38,7 +38,10 @@ py -m pip install --upgrade tensorflow-gpu
 
 ## Project
 
-Create a folder name `ANPR` and copy the following py files:
+Create a folder name `anpr` and copy the following py files and folders:
+- `bgs\` (backgrounds images)
+- `fonts\` (ttf file)
+- `test\` (generated licence plate, _empty_)
 - `common.py` (Common variables)
 - `model.py` (py dependencie)
 - `gen.py` (For generate test set images)
