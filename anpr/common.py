@@ -29,16 +29,16 @@ __all__ = (
     'softmax',
 )
 
-import numpy as np
+import numpy
 
 DIGITS = "0123456789"
 LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-LETTERS_ECU = "ABUCXHOEWGILRMVNSPQKTZYJ"  //first char ECUADOR's licence plate
+LETTERS_ECU = "ABUCXHOEWGILRMVNSPQKTZYJ" #first char used in ECUADOR
 CHARS = LETTERS + DIGITS
 
 def softmax(a):
-    exps = np.exp(a.astype(numpy.float64))
-    return exps / np.sum(exps, axis=-1)[:, np.newaxis]
+    exps = numpy.exp(a.astype(numpy.float64))
+    return exps / numpy.sum(exps, axis=-1)[:, numpy.newaxis]
 
 def sigmoid(a):
-  return 1. / (1. + np.exp(-a))
+  return 1. / (1. + numpy.exp(-a))
