@@ -173,7 +173,7 @@ if __name__ == "__main__":
     print("detect start! ", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     im = cv2.imread(sys.argv[1])
 
-    im_gray = cv2.cvtColor(im, 0) / 255.
+    im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY) / 255.
 
     plt.imshow(im_gray)
     plt.show()
