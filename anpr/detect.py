@@ -212,7 +212,7 @@ if __name__ == "__main__":
                     (255, 255, 255),
                     thickness=2)
 
-    cv2.imwrite(sys.argv[2], im)
+    cv2.imwrite(sys.argv[3], im)
     print("show result:")
     plt.imshow(im)
     plt.show()
