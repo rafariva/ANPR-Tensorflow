@@ -39,12 +39,13 @@ py -m pip install matplotlib
 #*CPU version*
 py -m pip install --upgrade tensorflow
 ```
-or
+or 
 ```
 #*GPU version*
 py -m pip install --upgrade tensorflow-gpu
 ```
-For Nvidia, must install [CUDA] (https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal)
+For GPU Nvidia, must install [CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal)
+
 
 
 ## Project
