@@ -44,7 +44,7 @@ or
 #*GPU version*
 py -m pip install --upgrade tensorflow-gpu
 ```
-For GPU Nvidia, must install [CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal) and [cuDNN](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.1_20171129/cudnn-9.1-windows10-x64-v7) (for cuDNN follow [this steps](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows))
+For GPU Nvidia, must install [CUDA v9.0](https://developer.nvidia.com/cuda-90-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal) and [cuDNN v9.0](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.0_20171129/cudnn-9.0-windows10-x64-v7) (for cuDNN follow [this steps](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows))
 
 
 
