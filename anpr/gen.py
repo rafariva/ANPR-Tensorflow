@@ -275,7 +275,7 @@ def generate_ims():
         yield generate_im(font_char_ims[random.choice(fonts)], num_bg_images)
 
 
-generate_amount = 1000  #MUST ESPECIFY THE AMOUNT 
+generate_amount = 50000  #MUST ESPECIFY THE AMOUNT 
 
 if __name__ == "__main__":
     #os.mkdir("test")
