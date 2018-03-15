@@ -236,7 +236,7 @@ def train(learn_rate, report_steps, batch_size, initial_weights=None):
 if __name__ == "__main__":
     print("Train start! ", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
-    weights_fname = "weights.npz"
+    weights_fname = "CPUweights.npz"
     if weights_fname in os.listdir(os.getcwd()):
         f = numpy.load(weights_fname)
         initial_weights = [f[n] for n in sorted(f.files,
