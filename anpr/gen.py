@@ -278,7 +278,8 @@ def generate_ims():
 generate_amount = 50000  #MUST ESPECIFY THE AMOUNT 
 
 if __name__ == "__main__":
-    #os.mkdir("test")
+    if os.path.exists("/test"): os.rmdir('/test')
+    os.mkdir("test")
     im_gen = itertools.islice(generate_ims(), generate_amount)
     for img_idx, (im, c, p) in enumerate(im_gen):
         fname = "test/{:08d}_{}_{}.png".format(img_idx, c,
