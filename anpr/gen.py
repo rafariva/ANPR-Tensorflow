@@ -213,7 +213,7 @@ def generate_plate(font_height, char_ims):
 def generate_bg(num_bg_images):
     found = False
     while not found:
-        fname = "bgs/{:08d}.png".format(random.randint(0, num_bg_images - 1))
+        fname = "bgs/{:08d}.jpg".format(random.randint(0, num_bg_images - 1))
         bg = cv2.imread(fname, 0) / 255.
         if (bg.shape[1] >= OUTPUT_SHAPE[1] and
                 bg.shape[0] >= OUTPUT_SHAPE[0]):
@@ -282,7 +282,7 @@ if __name__ == "__main__":
     os.mkdir("test")
     im_gen = itertools.islice(generate_ims(), generate_amount)
     for img_idx, (im, c, p) in enumerate(im_gen):
-        fname = "test/{:08d}_{}_{}.png".format(img_idx, c,
+        fname = "test/{:08d}_{}_{}.jpg".format(img_idx, c,
                                                "1" if p else "0")
         print(fname)
         cv2.imwrite(fname, im * 255.)
