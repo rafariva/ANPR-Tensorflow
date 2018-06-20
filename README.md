@@ -65,7 +65,7 @@ Create a folder name `anpr` and copy the following py files and folders:
 
 Usage is as follows:
 
-1. (optional but recommended) `./extractbgs.py SUN397.tar.gz`: Extract ~3GB of background images from the [SUN database](http://groups.csail.mit.edu/vision/SUN/) into `bgs/` (`bgs/` must be empty). The tar file (36GB) can be [downloaded here](http://vision.princeton.edu/projects/2010/SUN/SUN397.tar.gz). This step may take a while as it will extract 108,634 images.
+1. (optional but recommended) `./extractbgs.py SUN397.tar.gz`: Extract ~3GB of background images from the [SUN database](http://groups.csail.mit.edu/vision/SUN/) into `bgs/` (`bgs/` must have enumerate images in jpg format). The tar file (36GB) can be [downloaded here](http://vision.princeton.edu/projects/2010/SUN/SUN397.tar.gz). This step may take a while as it will extract 108,634 images.
 
 2. `./gen.py`: Locate variable `generate_amount ` and set the number you want (default 100), it will safe the test set images in `test/` (`test/`must be empty). This step requires a `.ttf` files to be in the `fonts/` directory.
 
