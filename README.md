@@ -50,9 +50,8 @@ For GPU Nvidia, must install [CUDA v9.0](https://developer.nvidia.com/cuda-90-do
 **warning!! _Other version of python, tensorflow, CUDA or cuDNN must cause problems_**
 
 
-For python 3.7.* ([last version](https://www.python.org/downloads/windows/) **of 64bits**) 
-Install tensorflow-gpu==1.14.0
-For GPU Nvidia, must install [CUDA v10.1](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal) and all its patchs, and then copy [cuDNN v10.1](https://developer.nvidia.com/rdp/cudnn-archive) files into CUDA folder (for cuDNN follow [this steps](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows))
+For python 3.7.* ([last version](https://www.python.org/downloads/windows/) **of 64bits**). 
+Install tensorflow-gpu==2.0.0-rc0. For GPU Nvidia, must install [CUDA v10.0](https://developer.nvidia.com/cuda-10.0-download-archive?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exelocal) and all its patchs, and then copy [cuDNN v10.0](https://developer.nvidia.com/rdp/cudnn-archive) files into CUDA folder (for cuDNN follow [this steps](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows))
 
 
 ## Project
